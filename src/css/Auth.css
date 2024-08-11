@@ -1,0 +1,56 @@
+input.input {
+  /* Base styles */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Shadow */
+  border-width: 1px; /* Border */
+  border-radius: 0.25rem; /* Rounded corners */
+  
+  width: 100%; /* Full width */
+  padding-top: 0.5rem; /* Padding top */
+  padding-bottom: 0.5rem; /* Padding bottom */
+  padding-left: 0.75rem; /* Padding left */
+  padding-right: 0.75rem; /* Padding right */
+  color: #4a5568; /* Text color */
+  line-height: 1.25; /* Line height */
+
+  /* Focus styles */
+  outline: none; /* Remove default focus outline */
+  border-color:#a2a2a2; /* Transparent border color initially */
+}
+
+input.input:focus {
+  border-color: #3276d5; /* Green border color on focus */
+  box-shadow: 0 0 2px 2px rgb(49, 96, 215,0.5); /* Green ring shadow on focus */
+}
+
+form.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  padding: 2rem;
+  border-radius: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgba(218, 218, 218, 0.833), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
+  width: 25rem;
+  
+}
+
+
+.spinner {
+  border: 4px solid rgb(228, 228, 228); /* Light grey background */
+  border-left: 4px solid #ffffff; /* Blue color for the spinner */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-block: 4px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+ 
+}
+
+@keyframes spin {
+  0% { transform: rotate(10deg); }
+  100% { transform: rotate(360deg); }
+}
+
