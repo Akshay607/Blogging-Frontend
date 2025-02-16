@@ -20,7 +20,7 @@ function App() {
      <div className='w-2/3'>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Login/>}/>
+          <Route path="/#" element={<Login/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path='/profile' element={<Profile/>}/>
