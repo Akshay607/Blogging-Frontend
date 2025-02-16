@@ -34,7 +34,7 @@ function Login() {
         console.log("res",res)
        // setState({...loginRes.data.data})
         localStorage.setItem('loginInfo',JSON.stringify({...loginRes.data.data}))
-        navigate('/tweets');
+        navigate('#/tweets');
       } else {
         setRes({isError:true, mess:loginRes.data.message});
       }
@@ -49,7 +49,7 @@ function Login() {
   };
 
   const handleSignup = () => {
-    navigate('/register');
+    navigate('#/register');
   };
 
   return (
