@@ -18,7 +18,7 @@ function App() {
     <div className="App flex flex-col items-center  h-screen">
       <Nav/>
      <div className='w-2/3'>
-      <HashRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/#" element={<Login/>}/>
           <Route path="/login" element={<Login/>}/>
