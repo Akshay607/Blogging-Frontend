@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import React,{useContext, useMemo,createContext,useState} from 'react';
-import { HashRouter, Routes, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Switch} from 'react-router-dom';
 import { Auth, Login,Register,Logout } from './components/Auth';
 import {Follower} from './components/Follow'
 import { Profile } from './components/profile';
@@ -16,11 +16,15 @@ function App() {
  
   return (
     <div className="App flex flex-col items-center  h-screen">
+      <BrowserRouter basename='/Blogging-Frontend'>
       <Nav/>
+      
      <div className='w-2/3'>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+     <h1>hi sdgsshdhsdh</h1>
+     
+      
         <Routes>
-          <Route path="/#" element={<Login/>}/>
+          <Route path="/" element={<Login/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path='/profile' element={<Profile/>}/>
@@ -28,10 +32,10 @@ function App() {
           <Route path='/logout' element={<Logout/>}/>
           <Route path='/img' element={<Img/>}/>
         </Routes>
-      </HashRouter>
+     
 
       </div>
-     
+      </BrowserRouter>
     </div>
   );
 }

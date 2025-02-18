@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Nav = () => {
     <nav className="bg-gray-700 px-4 py-2 w-full flex justify-between items-center sticky top-0 z-10">
       <div className="items-center">
         <h1 className="text-white text-2xl font-bold">
-          <a href='#/tweets'>My App</a>
+          <Link to='/tweets'>My App</Link>
         </h1>
       </div>
       <div className="flex items-center">
@@ -25,24 +26,24 @@ const Nav = () => {
           />
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-              <a
-                href="#/profile"
+              <Link
+                to="/profile"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
               >
                 Profile
-              </a>
-              <a
-                href="#/settings"
+              </Link>
+              <Link
+                to="/settings"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
               >
                 Settings
-              </a>
-              <a
-                href="#/logout"
+              </Link>
+              <Link
+                to="/logout"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
               >
                 Logout
-              </a>
+              </Link>
             </div>
           )}
         </div>

@@ -1,8 +1,8 @@
 {
-  "homepage": "http://Akshay607.github.io/Blogging-Frontend/#",
-  "name": "blog",
+  "homepage": "http://Akshay607.github.io/Blogging-Frontend",
+  "name": "Blogging-Frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@mui/material": "^5.15.21",
     "@testing-library/jest-dom": "^5.17.0",

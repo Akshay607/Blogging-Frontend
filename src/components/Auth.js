@@ -6,6 +6,7 @@ import { DomainURL } from '../constants'
 import axios from 'axios'
 import { Profile } from './profile'
 import { BrowserRouter,Route, Routes, useNavigate,useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 //import { localStorage } from "../App";
 
 function Login() {
@@ -34,7 +35,7 @@ function Login() {
         console.log("res",res)
        // setState({...loginRes.data.data})
         localStorage.setItem('loginInfo',JSON.stringify({...loginRes.data.data}))
-        navigate('#/tweets');
+        navigate('/tweets');
       } else {
         setRes({isError:true, mess:loginRes.data.message});
       }
@@ -49,7 +50,7 @@ function Login() {
   };
 
   const handleSignup = () => {
-    navigate('#/register');
+    navigate('/register');
   };
 
   return (
@@ -220,7 +221,7 @@ function Register() {
            disabled={isLoading} >
             {isLoading ? <><div className="spinner"></div></> : 'Signup'}
           </button>
-          <p className='mt-4'>Already have an account? <a className='text-blue-600' href='/login'>Login</a></p>
+          <p className='mt-4'>Already have an account? <Link className='text-blue-600' to='/login'>Login</Link></p>
         </div>
       </form>
     </div>
