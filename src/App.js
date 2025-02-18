@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import React,{useContext, useMemo,createContext,useState} from 'react';
-import { BrowserRouter, Routes, Route, Switch} from 'react-router-dom';
+import { HashRouter, Routes, Route, Switch} from 'react-router-dom';
 import { Auth, Login,Register,Logout } from './components/Auth';
 import {Follower} from './components/Follow'
 import { Profile } from './components/profile';
@@ -16,11 +16,11 @@ function App() {
  
   return (
     <div className="App flex flex-col items-center  h-screen">
-      <BrowserRouter basename='/Blogging-Frontend'>
+      <HashRouter basename='/Blogging-Frontend'>
       <Nav/>
       
      <div className='w-2/3'>
-     <h1>hi sdgsshdhsdh</h1>
+     
      
       
         <Routes>
@@ -35,7 +35,7 @@ function App() {
      
 
       </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
